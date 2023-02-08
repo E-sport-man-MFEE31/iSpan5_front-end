@@ -1,0 +1,105 @@
+footer {
+  background-color: #141414;
+  width: 100%;
+  height: 150px;
+  min-height: 150px;
+  color: #c3c7cf;
+  font-weight: bold;
+  font-family: "Monda", sans-serif;
+}
+footer div {
+  margin: 0px auto;
+}
+footer div nav {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+}
+footer div nav ul {
+  padding: 10px 0px 0px 0px;
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+footer div nav ul li {
+  margin-left: 2rem;
+  cursor: pointer;
+}
+footer div .line {
+  margin: 0 auto;
+  height: 1px;
+  width: 65vw;
+  background-color: #c3c7cf;
+}
+footer div div {
+  display: flex;
+}
+footer div div div {
+  display: flex;
+  justify-content: center;
+  width: 60vw;
+  margin-top: 10px;
+}
+footer div div div div {
+  width: 55vw;
+  cursor: pointer;
+}
+footer div div div .icon-group {
+  width: 5vw;
+}
+footer div div div .icon-group svg {
+  color: #c3c7cf;
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-left: 0.7rem;
+}
+
+@media screen and (max-width: 1300px) {
+  footer {
+    height: 150px;
+  }
+  footer .line {
+    display: none;
+  }
+  footer div div {
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  footer div div div {
+    width: 100%;
+  }
+  footer div div .icon-group {
+    display: none;
+  }
+}
+@media screen and (max-width: 998px) {
+  footer {
+    height: 500px;
+  }
+  footer div {
+    width: 100%;
+  }
+  footer div nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  footer div nav ul {
+    padding: 10px 0px 0px 0px;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  footer div nav ul li {
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+}/*# sourceMappingURL=footer.css.map */

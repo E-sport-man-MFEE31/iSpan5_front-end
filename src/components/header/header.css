@@ -1,0 +1,239 @@
+@charset "UTF-8";
+header {
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  max-height: 100px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  transition: top 0.4s ease-out;
+  z-index: 999;
+  justify-content: space-between;
+}
+header .logo a {
+  padding: 10px 10px;
+  display: flex;
+  font-size: 48pt;
+  font-weight: bolder;
+  padding: "0px 25px";
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+header .logo a div {
+  background: -webkit-linear-gradient(left, #0f0, #00f, #f00) 0 0 no-repeat;
+  background-size: 300px;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.418);
+  -webkit-animation: shine 2s infinite;
+          animation: shine 2s infinite;
+}
+@-webkit-keyframes shine {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+@keyframes shine {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+header nav {
+  display: flex;
+}
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  letter-spacing: 0.1rem;
+}
+header nav ul li {
+  margin-left: 4rem;
+  font-weight: bold;
+  font-size: 1.75rem;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom, yellow 0%, yellow 100%);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position-x: right;
+  transition: background-size 300ms;
+}
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+header nav ul li:hover {
+  background-size: 100% 100%;
+  background-position-x: left;
+}
+header .icon-groups {
+  display: flex;
+}
+header .icon-groups a svg {
+  display: block;
+  padding: 5px 0px 0px 0px;
+  color: #fb570b;
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+}
+header .icon-groups .login {
+  padding: 6px 45px;
+  background-color: #fb570b;
+  border-radius: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+}
+header .icon-groups .login span::after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  right: 0px;
+  transition: 0.5s;
+  color: black;
+}
+header .icon-groups .login:hover {
+  background-color: #feac44;
+}
+header .icon-groups .login:hover span {
+  color: black;
+  position: relative;
+  padding-right: 18px;
+}
+header .icon-groups .login:hover span::after {
+  opacity: 1;
+  right: 0;
+}
+header .icon-groups .menu {
+  display: none;
+}
+
+header.active {
+  top: -200px;
+  transition: top 0.4s ease-out;
+}
+
+div .search-group {
+  display: none;
+}
+
+div .search-group.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+div .search-group.active input.search-input {
+  width: 60vh;
+  height: 2.15rem;
+  margin-bottom: 0.5rem;
+}
+div .search-group.active input.search-input:focus {
+  z-index: 3;
+}
+div .search-group.active a.search-inputButton {
+  color: white;
+  font-size: 22px;
+  background-color: #fb570b;
+  border-radius: 3px 5px 5px 3px;
+  margin-left: -1px;
+  margin-top: 0.9px;
+  width: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+div .navigation-menu {
+  display: none;
+}
+
+div .navigation-menu.active {
+  display: none;
+}
+
+@media screen and (max-width: 1250px) {
+  header .logo {
+    display: flex;
+    font-size: 40pt;
+    font-weight: bolder;
+    padding: "0px 25px";
+    color: white;
+  }
+  header .logo div {
+    color: #fb570b;
+  }
+  header nav {
+    display: flex;
+  }
+  header nav ul {
+    list-style-type: none;
+    display: flex;
+    letter-spacing: 0.1rem;
+  }
+  header nav ul li {
+    margin-left: 3rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  header .icon-groups .login {
+    font-size: 1.45rem;
+    padding: 4px 25px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  header {
+    width: 100%;
+  }
+  header nav ul li {
+    display: none;
+  }
+  header .icon-groups {
+    display: flex;
+  }
+  header .icon-groups a svg {
+    display: block;
+    padding: 5px 0px 0px 0px;
+    color: #fb570b;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+  }
+  header .icon-groups .login {
+    display: none;
+  }
+  header .icon-groups .menu {
+    display: block;
+  }
+  div .navigation-menu.active {
+    display: flex;
+    background-color: black;
+  }
+  div .navigation-menu.active ul {
+    list-style-type: none;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  div .navigation-menu.active ul li {
+    margin-top: 10px;
+    text-align: center;
+  }
+  div .navigation-menu.active ul li a {
+    text-decoration: none;
+    color: white;
+  }
+}/*# sourceMappingURL=header.css.map */

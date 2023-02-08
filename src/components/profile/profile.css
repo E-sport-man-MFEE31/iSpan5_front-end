@@ -1,0 +1,124 @@
+.title {
+  width: 20%;
+  margin: 0 auto;
+  justify-content: center;
+}
+.title .titleFirst {
+  color: #FB570B;
+}
+
+.Nav-title {
+  padding-bottom: 40px;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 15px;
+}
+.Nav-title .detailPath .homeIcon {
+  font-size: 22px;
+}
+.Nav-title .detailPath .myOrder {
+  color: #FB570B;
+}
+
+.tableFrame {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+  padding-bottom: 60px;
+}
+.tableFrame .tableLeft {
+  width: 20%;
+}
+.tableFrame .tableRight {
+  width: 80%;
+}
+.tableFrame .tableRight .profileInfo {
+  width: 60%;
+  margin: 0 auto;
+}
+.tableFrame .tableRight .profileInfo .inputChanging {
+  font-size: 22px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.701);
+  display: flex;
+}
+.tableFrame .tableRight .profileInfo .inputChanging label {
+  padding: 10px;
+  width: 20%;
+  text-align: center;
+  align-self: center;
+}
+.tableFrame .tableRight .profileInfo .inputChanging .inputWord {
+  padding: 10px;
+  width: 80%;
+  margin: 20px;
+}
+.tableFrame .tableRight .profileInfo .inputChanging .input {
+  margin: 10px;
+  width: 80%;
+  margin: 20px;
+  border-radius: 5px;
+}
+.tableFrame .tableRight .profileInfo .btnGroups {
+  align-items: center;
+}
+.tableFrame .tableRight .profileInfo .btnGroups .btnYes {
+  background-color: #FC8F05;
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin-left: 20px;
+}
+.tableFrame .tableRight .profileInfo .btnGroups .btnNo {
+  background-color: #C3C7CF;
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin-left: 20px;
+}
+.tableFrame .tableRight .profileStatus {
+  width: 40%;
+  margin: 0 auto;
+}
+.tableFrame .tableRight .profileStatus .profilePhoto {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 2px solid #FC8F05;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.tableFrame .tableRight .profileStatus .profilePhoto .profileImage {
+  width: 170px;
+  height: 170px;
+}
+.tableFrame .tableRight .profileStatus .profileName {
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.719);
+  text-align: center;
+  padding: 30px;
+  font-weight: bold;
+}
+.tableFrame .tableRight .profileStatus .authorityStatus {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.719);
+  text-align: center;
+  padding-bottom: 40px;
+  font-weight: bold;
+}
+.tableFrame .tableRight .profileStatus .btns {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.tableFrame .tableRight .profileStatus .btns .btnComplete {
+  background-color: #FB570B;
+  border-radius: 10px;
+  width: 150px;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+.tableFrame .tableRight .profileStatus .btns .photoUpload {
+  background-color: #FC8F05;
+  border-radius: 10px;
+  width: 150px;
+  font-size: 20px;
+}/*# sourceMappingURL=profile.css.map */

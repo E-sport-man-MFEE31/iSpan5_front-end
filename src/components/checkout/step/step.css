@@ -1,0 +1,36 @@
+.step-groups {
+  display: flex;
+  height: 5rem;
+  max-height: 6rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.step-groups .step-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.step-groups .step-group .number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  color: white;
+  background-color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.step-groups .step-group .number.active {
+  background-color: #feac44;
+}
+.step-groups .line {
+  width: 12rem;
+  height: 0.2rem;
+  background-color: black;
+}/*# sourceMappingURL=step.css.map */

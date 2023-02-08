@@ -1,0 +1,414 @@
+$main-color: #fb570b;
+$sub-color: #fc8f05;
+$gray-color: #c3c7cf;
+.title {
+  width: 50%;
+  margin: 0 auto;
+  justify-content: center;
+  .titleFirst {
+    color: $main-color;
+  }
+}
+
+.Nav-title {
+  padding-bottom: 40px;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 15px;
+  .detailPath {
+    .homeIcon {
+      font-size: 22px;
+    }
+    .myOrder {
+      color: $main-color;
+    }
+  }
+}
+.tableFrame {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+  padding-bottom: 60px;
+  .tableLeft {
+    width: 20%;
+    ul {
+      list-style: none;
+      padding: 0px;
+      li {
+        margin-bottom: 40px;
+        .btnLink {
+          padding: 15px 20px;
+          text-decoration: none;
+          border-radius: 10px;
+          font-weight: bold;
+          font-size: 20px;
+          color: hsla(0, 0%, 0%, 0.74);
+        }
+        .btnHover {
+          background-color: white;
+          &:hover {
+            background-color: $sub-color;
+          }
+        }
+      }
+    }
+  }
+  .tableRight {
+    width: 80%;
+    .statusSearch {
+      .orderStatus {
+        display: flex;
+        justify-content: end;
+        .btnGroup {
+          display: grid;
+          width: 400px;
+          grid-template-columns: repeat(5, 1fr);
+          grid-column-gap: 7px;
+
+          .btnFirst {
+            padding: 5px;
+            font-size: 15px;
+            border-radius: 0;
+            border: 1px solid $sub-color;
+            background-color: $sub-color;
+            &:hover {
+              background-color: hwb(34 9% 0%);
+            }
+          }
+          .btnSecond {
+            padding: 5px;
+            font-size: 10px;
+            border-radius: 0;
+            border: 1px solid $gray-color;
+            background-color: $gray-color;
+            &:hover {
+              background-color: hsl(222, 8%, 74%);
+            }
+          }
+        }
+      }
+    }
+    .inputs {
+      display: flex;
+      justify-content: end;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      .inputGroup {
+        display: flex;
+        width: 380px;
+
+        .inputSearch {
+          width: 300px;
+          border-radius: 5px 0 0 5px;
+        }
+        .btnSearch {
+          border-radius: 0 5px 5px 0;
+          width: 80px;
+          height: 40px;
+          font-weight: bold;
+          color: white;
+          background-color: $main-color;
+          &:hover {
+            background-color: hsl(19, 91%, 50%);
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+table {
+  width: 100%;
+  tr {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.326);
+    th {
+      color: black;
+      font-weight: bold;
+      padding: 10px 15px;
+      border-bottom: 3px solid rgba(0, 0, 0, 0.482);
+      text-align: center;
+      font-size: 18px;
+    }
+    td {
+      text-align: center;
+      color: rgba(0, 0, 0, 0.482);
+      font-weight: bold;
+      font-size: 18px;
+      padding: 15px 5px;
+      .btnDetail {
+        border: 1px solid $sub-color;
+        border-radius: 13px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 125px;
+        font-weight: bold;
+        font-size: 18px;
+        background-color: $sub-color;
+        color: hsla(0, 0%, 0%, 0.74);
+        &:hover {
+          background-color: hwb(34 9% 0%);
+        }
+        .btnContent {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+
+    .OrderNumber {
+      color: $main-color;
+    }
+  }
+  .borderNone {
+    border-bottom: 1px solid transparent;
+  }
+  .OrderSpecial td {
+    color: black;
+    .btnInvalid {
+      border: 2px solid $sub-color;
+      border-radius: 13px;
+      background-color: white;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      width: 125px;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: hsla(0, 0%, 0%, 0.74);
+      &:hover {
+        background-color: hwb(34 9% 0%);
+      }
+    }
+  }
+}
+.paginationUl {
+  margin-top: 30px;
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  align-content: center;
+}
+
+@media screen and (min-width: 430px) and (max-width: 650px) {
+  .title {
+    width: 70% !important;
+  }
+  .tableFrame {
+    display: block !important;
+    .tableLeft {
+      width: 100% !important;
+      ul {
+        width: 100% !important;
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        li {
+          .btnLink {
+            padding: 5px 9px !important;
+            font-size: 18px !important;
+            background-color: white !important;
+            &:hover {
+              background-color: $sub-color !important;
+            }
+            .btnClick {
+              background-color: $sub-color !important;
+            }
+          }
+        }
+      }
+    }
+    .tableRight {
+      width: 100% !important;
+      .statusSearch {
+        .orderStatus {
+          margin: 0 auto;
+          justify-content: center !important;
+          .btnGroup {
+            .btnFirst {
+              padding: 3px 2px !important;
+              font-size: 10px !important;
+            }
+            .btnSecond {
+              padding: 3px 2px !important;
+              font-size: 10px !important;
+            }
+          }
+        }
+      }
+      .inputs {
+        display: flex;
+        justify-content: center !important;
+        .inputGroup {
+          width: 330px !important;
+
+          .inputSearch {
+            width: 80% !important;
+            font-size: 15px;
+          }
+          .btnSearch {
+            font-size: 15px;
+            width: 20% !important;
+            height: 40px;
+            font-weight: bold;
+            color: white;
+            background-color: $main-color;
+            &:hover {
+              background-color: hsl(19, 91%, 50%);
+              color: white;
+            }
+          }
+        }
+      }
+      table {
+        width: 100%;
+        tr {
+          .dNone {
+            display: none !important;
+          }
+          th {
+            width: 30% !important;
+            padding: 5px !important;
+          }
+          td {
+            font-size: 15px !important;
+            .btnDetail {
+              padding-top: 8px;
+              padding-bottom: 8px;
+              width: 90px;
+              font-size: 15px !important;
+            }
+          }
+        }
+      }
+      .paginationUl {
+        justify-content: center;
+      }
+    }
+  }
+}
+@media screen and (min-width: 651px) and (max-width: 885px) {
+  .title {
+    width: 70% !important;
+  }
+  .tableFrame {
+    display: block !important;
+    .tableLeft {
+      width: 100% !important;
+      ul {
+        width: 100% !important;
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        li {
+          .btnLink {
+            padding: 5px 9px !important;
+            font-size: 18px !important;
+            background-color: white !important;
+            &:hover {
+              background-color: $sub-color !important;
+            }
+            .btnClick {
+              background-color: $sub-color !important;
+            }
+          }
+        }
+      }
+    }
+    .tableRight {
+      width: 100% !important;
+      .statusSearch {
+        .orderStatus {
+          margin: 0 auto;
+          justify-content: center !important;
+          .btnGroup {
+            .btnFirst {
+              padding: 3px 2px !important;
+              font-size: 10px !important;
+            }
+            .btnSecond {
+              padding: 3px 2px !important;
+              font-size: 10px !important;
+            }
+          }
+        }
+      }
+      .inputs {
+        display: flex;
+        justify-content: center !important;
+        .inputGroup {
+          width: 400px !important;
+
+          .inputSearch {
+            width: 80% !important;
+            font-size: 15px;
+          }
+          .btnSearch {
+            font-size: 15px;
+            width: 20% !important;
+            height: 40px;
+            font-weight: bold;
+            color: white;
+            background-color: $main-color;
+            &:hover {
+              background-color: hsl(19, 91%, 50%);
+              color: white;
+            }
+          }
+        }
+      }
+      table {
+        width: 100%;
+        tr {
+          .dNone {
+            display: none !important;
+          }
+          th {
+            width: 30% !important;
+            padding: 5px !important;
+          }
+          td {
+            font-size: 15px !important;
+            .btnDetail {
+              padding-top: 8px;
+              padding-bottom: 8px;
+              width: 90px;
+              font-size: 15px !important;
+            }
+          }
+        }
+      }
+      .paginationUl {
+        justify-content: center;
+      }
+    }
+  }
+}
+@media screen and (min-width: 886px) and (max-width: 1200px) {
+  .tableFrame {
+    .tableLeft {
+      ul {
+        height: 100%;
+        padding-top: 200px !important;
+        li {
+          margin-bottom: 30px;
+          .btnLink {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    .tableRight {
+      .statusSearch {
+        .orderStatus {
+          .btnGroup {
+            width: 360px;
+            .btnFirst {
+              font-size: 10px;
+            }
+            .btnSecond {
+              font-size: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

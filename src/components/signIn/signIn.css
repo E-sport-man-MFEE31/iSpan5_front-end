@@ -1,0 +1,51 @@
+.signIn {
+  width: 60%;
+  height: 100vh;
+  margin: 0 auto;
+  font-size: 20px;
+}
+.signIn .signIn_title {
+  text-align: center;
+}
+.signIn .signIn_title h2 {
+  font-weight: bold;
+  padding: 30px;
+}
+.signIn .signIn_title h2 span {
+  color: #fb570b;
+}
+.signIn .signIn_container {
+  font-weight: bold;
+}
+.signIn .signIn_container .form-control {
+  padding: 10px;
+  margin: 10px;
+}
+.signIn .signIn_container .signIn_wrapper {
+  text-align: center;
+}
+.signIn .signIn_container .signIn_wrapper button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+}
+.signIn .signIn_container .signIn_wrapper .btn-SignIn {
+  background-color: #fb570b;
+}
+.signIn .signIn_container .signIn_wrapper .btn-FB {
+  background-color: #3b5998;
+}
+.signIn .signIn_container .signIn_wrapper .btn-Google {
+  background-color: #ff5050;
+}
+.signIn .signIn_container .signIn_wrapper .signIn_wrap {
+  margin: 10px;
+}
+.signIn .signIn_container .signIn_wrapper .signIn_wrap a {
+  color: #000000;
+  text-decoration: none;
+}/*# sourceMappingURL=signIn.css.map */

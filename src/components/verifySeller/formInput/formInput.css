@@ -1,0 +1,35 @@
+.inputChanging {
+  font-size: 22px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.701);
+  display: flex;
+}
+.inputChanging label {
+  padding: 10px;
+  width: 20%;
+  text-align: center;
+  align-self: center;
+  -webkit-text-decoration: nowrap;
+          text-decoration: nowrap;
+}
+.inputChanging .inputcontent {
+  flex-direction: column;
+  width: 80%;
+  margin: 20px;
+}
+.inputChanging .inputcontent input {
+  width: 100%;
+  border-radius: 5px;
+}
+.inputChanging .inputcontent input:invalid[focused=true] {
+  border: 1px solid red;
+}
+.inputChanging .inputcontent input:invalid[focused=true] ~ span {
+  display: block;
+}
+.inputChanging .inputcontent span {
+  font-size: 12px;
+  padding: 3px;
+  color: red;
+  display: none;
+}/*# sourceMappingURL=formInput.css.map */

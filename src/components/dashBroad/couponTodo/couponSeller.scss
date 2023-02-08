@@ -1,0 +1,52 @@
+$main-color: #FB570B;
+$sub-color: #FC8F05;
+$gray-color: #C3C7CF;
+.btnAddCoupon {
+    width: 140px;
+    border: 1px solid $sub-color;
+    background-color: $sub-color;
+    font-weight: bold;
+    &:hover {
+        background-color: hsl(34, 93%, 56%);
+        border: 1px solid hsl(34, 93%, 56%);
+    }
+    margin-bottom: 20px;
+}
+.formOutside {
+    form {
+        .formDiv {
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            label {
+                font-size: 20px;
+                font-weight: bold;
+                padding-right: 10px;
+                padding-bottom: 30px;
+            }
+            input {
+                margin-bottom: 20px;
+                border-radius: 5px;
+                height: 40px;
+            }
+        }
+    }
+}
+.returnPage {
+    background-color: transparent;
+    border: 1px solid transparent;
+    text-decoration: underline;
+    color: $gray-color;
+    margin-top: 30px;
+    font-weight: bold;
+    &:hover {
+        color: $main-color;
+        background-color: transparent;
+        border: 1px solid transparent;
+    }
+}
+
+.changeInput {
+    width: 150px;
+    border-radius: 5px;
+}

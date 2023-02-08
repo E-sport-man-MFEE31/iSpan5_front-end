@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  width: 80%;
+  height: 150vh;
+}
+.container form {
+  background-color: white;
+  padding: 0px 60px;
+  border-radius: 10px;
+}
+.container h1 {
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+.container button {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  border: none;
+  background-color: #fb570b;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}/*# sourceMappingURL=register.css.map */

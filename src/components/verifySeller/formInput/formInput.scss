@@ -1,0 +1,35 @@
+.inputChanging {
+    font-size: 22px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.701);
+    display: flex;
+    label {
+        padding: 10px;
+        width: 20%;
+        text-align: center;
+        align-self: center;
+        text-decoration: nowrap;
+    }
+    .inputcontent{
+        flex-direction: column;
+        width: 80%;
+        margin: 20px;
+        input {
+            width: 100%;
+            border-radius: 5px;
+            &:invalid[focused="true"] {
+                border: 1px solid red;
+            }
+            &:invalid[focused="true"] ~ span {
+                display: block;
+            }
+        }
+        span {
+            font-size: 12px;
+            padding: 3px;
+            color: red;
+            display: none;
+        }
+    }   
+    
+}

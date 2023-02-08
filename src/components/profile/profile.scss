@@ -1,0 +1,129 @@
+$main-color: #FB570B;
+$sub-color: #FC8F05;
+$gray-color: #C3C7CF;
+
+.title {
+    width: 20%;
+    margin: 0 auto;
+    justify-content: center;
+    .titleFirst {
+        color: $main-color;
+    }
+}
+.Nav-title {
+    padding-bottom: 40px;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 15px;
+    .detailPath {
+        .homeIcon {
+            font-size: 22px;
+        }
+        .myOrder {
+            color: $main-color;
+        }
+    }
+}
+.tableFrame {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    padding-bottom: 60px;
+    .tableLeft {
+        width: 20%;
+    }
+    .tableRight {
+        width: 80%;
+        .profileInfo {
+            width: 60%;
+            margin: 0 auto;
+            .inputChanging {
+                font-size: 22px;
+                font-weight: bold;
+                color: rgba(0, 0, 0, 0.701);
+                display: flex;
+                label {
+                    padding: 10px;
+                    width: 20%;
+                    text-align: center;
+                    align-self: center;
+                }
+                .inputWord {
+                    padding: 10px;
+                    width: 55%;
+                    margin: 20px;
+                }
+                .input {
+                    margin: 10px;
+                    width: 70%;
+                    margin: 20px;
+                    border-radius: 5px;
+                }
+            }
+            .btnGroups {
+                align-items: center;
+                .btnYes {
+                    background-color: $sub-color;
+                    padding: 10px 20px;
+                    border-radius: 15px;
+                    margin-left: 20px;
+                }
+                .btnNo {
+                    background-color: $gray-color;
+                    padding: 10px 20px;
+                    border-radius: 15px;
+                    margin-left: 20px;
+                }
+            }
+        }
+        .profileStatus {
+            width: 40%;
+            margin: 0 auto;
+            .profilePhoto {
+                width: 170px;
+                height: 170px;
+                border-radius: 50%;
+                border: 2px solid $sub-color;
+                margin: 0 auto;
+                overflow: hidden;
+                .profileImage {
+                    width: 170px;
+                    height: 170px;
+                }
+            }
+            .profileName {
+                font-size: 40px;
+                color: rgba(0, 0, 0, 0.719);
+                text-align: center;
+                padding: 30px;
+                font-weight: bold;
+            }
+            .authorityStatus {
+                font-size: 20px;
+                color: rgba(0, 0, 0, 0.719);
+                text-align: center;
+                padding-bottom: 40px;
+                font-weight: bold;
+            }
+            .btns {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                .btnComplete {
+                    background-color: $main-color;
+                    border-radius: 10px;
+                    width: 150px;
+                    font-size: 20px;
+                    margin-bottom: 25px;
+                }
+                .photoUpload {
+                    background-color: $sub-color;
+                    border-radius: 10px;
+                    width: 150px;
+                    font-size: 20px;
+                }
+            }
+            
+        }
+    }
+}

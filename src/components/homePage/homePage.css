@@ -1,0 +1,181 @@
+@charset "UTF-8";
+.imgbox {
+  background-image: url("../../../public/images/ASUS-ROG-Strix-Scope-19.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 75% 100%;
+  min-height: 100vh;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.1rem;
+  justify-content: center;
+  align-items: stretch;
+  text-align: center;
+}
+.imgbox span {
+  color: #fb570b;
+}
+.imgbox .title {
+  width: 100%;
+}
+.imgbox .directions {
+  color: #ffffff;
+  font-size: 13px;
+  min-width: 40%;
+  text-align: center;
+  line-height: 25px;
+  margin-top: 10px;
+}
+@media screen and (max-width: 998px) {
+  .imgbox .imgbox {
+    min-height: 100vh;
+    min-width: 100%;
+  }
+  .imgbox .title {
+    margin: 5rem auto 2rem auto;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+}
+.imgbox .btn {
+  border-radius: 10px;
+  width: 130px;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+}
+.imgbox .btn-warning {
+  background-color: #fc8f05;
+}
+
+.CarouselPage {
+  width: 100%;
+  height: 100%;
+}
+
+.InformationPageText {
+  background-color: #000;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  padding-top: 85px;
+  letter-spacing: 0.3rem;
+  justify-content: center;
+  align-items: center;
+}
+.InformationPageText span {
+  color: #fb570b;
+}
+
+.InformationPage {
+  background-color: #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.InformationPage .boxNews01 {
+  width: 620px;
+  height: 349px;
+  margin: 85px 25.5px 10px 10px;
+  padding: 10px;
+  background-image: url("../../../public/images/faker_news.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-decoration: none;
+}
+.InformationPage .boxNews01 p {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 3px 3px #000;
+}
+.InformationPage .boxNews02 {
+  width: 620px;
+  height: 349px;
+  margin: 85px 25.5px 10px 10px;
+  padding: 10px;
+  background-image: url("../../../public/images/news02.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-decoration: none;
+}
+.InformationPage .boxNews02 p {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 3px 3px #000;
+}
+
+.NewsTitle {
+  background-color: #000;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 34px;
+  font-weight: 700;
+  color: #ffffff;
+  padding-top: 80px;
+  letter-spacing: 0.2rem;
+  justify-content: center;
+  align-items: center;
+}
+.NewsTitle span {
+  color: #fb570b;
+}
+
+.NewsImg01 {
+  width: 968px;
+  height: 544px;
+  margin: 85px 25.5px 10px 10px;
+  padding: 10px;
+  background-image: url("../../../public/images/faker-re-signs-968x544.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.NewsImg02 {
+  width: 968px;
+  height: 544px;
+  margin: 85px 25.5px 10px 10px;
+  padding: 10px;
+  background-image: url("../../../public/images/T1’s heartbreak at Worlds 2022-1600x900.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.NewsText {
+  width: 968px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  letter-spacing: 0.2rem;
+}
+.NewsText span {
+  font-weight: 700;
+  color: #fb570b;
+}/*# sourceMappingURL=homePage.css.map */

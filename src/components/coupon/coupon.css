@@ -1,0 +1,257 @@
+.detailPath {
+  top: 160px;
+  left: 170px;
+}
+.detailPath .homeIcon {
+  font-size: 22px;
+}
+.detailPath .myOrder {
+  color: #fb570b;
+}
+
+.title {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.title .titleContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title .titleContent h2 {
+  text-align: center;
+}
+.title .titleContent .titleFirst {
+  color: #fb570b;
+}
+
+.tableFrame {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+  padding-bottom: 60px;
+}
+.tableFrame .tableLeft {
+  width: 20%;
+}
+.tableFrame .tableLeft ul {
+  list-style: none;
+  padding: 0px;
+}
+.tableFrame .tableLeft ul li {
+  padding: 10px;
+}
+.tableFrame .tableLeft ul li button {
+  margin-bottom: 10px;
+  width: 125px;
+  border-radius: 13px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  color: hsla(0deg, 0%, 0%, 0.74);
+  font-size: 20px;
+}
+.tableFrame .tableLeft ul li .btnHover {
+  background-color: white;
+}
+.tableFrame .tableLeft ul li .btnHover:hover {
+  background-color: #fc8f05;
+}
+.tableFrame .tableLeft ul li .btnOrder {
+  background-color: #fc8f05;
+}
+.tableFrame .tableRight {
+  width: 80%;
+}
+.tableFrame .tableRight .unExpired {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.4509803922);
+}
+.tableFrame .tableRight .unExpired .unExpiredWord {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+.tableFrame .tableRight .unExpired .btnAll {
+  background-color: #fc8f05;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  width: 70px;
+  height: 45px;
+}
+.tableFrame .tableRight .unExpired .btnAll:hover {
+  background-color: hsl(34deg, 98%, 55%);
+}
+.tableFrame .tableRight .unExpired .menuBar {
+  font-size: 40px;
+  color: #fb570b;
+  margin-bottom: 10px;
+}
+.tableFrame .tableRight .unExpiredCoupon {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 30px;
+}
+.tableFrame .tableRight .unExpiredCoupon .Coupon1 {
+  width: 600px;
+  height: 180px;
+  background-color: black;
+  display: flex;
+  margin-bottom: 30px;
+}
+.tableFrame .tableRight .unExpiredCoupon .Coupon1 .CouponLeft {
+  width: 30%;
+  height: 100%;
+  border-right: 2px solid white;
+}
+.tableFrame .tableRight .unExpiredCoupon .Coupon1 .CouponLeft .CouponIcon {
+  width: 100%;
+}
+.tableFrame .tableRight .unExpiredCoupon .Coupon1 .CouponLeft .CouponIcon .shoppingIcon {
+  color: white;
+  font-size: 100px;
+  width: 100%;
+}
+.tableFrame .tableRight .unExpiredCoupon .Coupon1 .CouponLeft .CouponContent {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #fb570b;
+  padding-bottom: 15px;
+}
+.tableFrame .tableRight .unExpiredCoupon .Coupon1 .CouponRight {
+  width: 70%;
+}
+.tableFrame .tableRight .unExpiredCoupon .Coupon1 .CouponRight .CouponUp {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.tableFrame .tableRight .unExpiredCoupon .Coupon1 .CouponRight .CouponUp .discount {
+  color: #fb570b;
+  font-size: 40px;
+  font-weight: bold;
+  padding-top: 40px;
+  padding-left: 20px;
+}
+.tableFrame .tableRight .unExpiredCoupon .Coupon1 .CouponRight .CouponUp .lowest {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+}
+.tableFrame .tableRight .unExpiredCoupon .Coupon1 .CouponRight .CouponDown {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.tableFrame .tableRight .unExpiredCoupon .Coupon1 .CouponRight .CouponDown .date {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  align-self: center;
+  padding-left: 20px;
+}
+.tableFrame .tableRight .unExpiredCoupon .Coupon1 .CouponRight .CouponDown .rules {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 20px;
+  align-self: center;
+  padding: 20px;
+}
+.tableFrame .tableRight .expired {
+  width: 100%;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.4509803922);
+}
+.tableFrame .tableRight .expired .expiredWord {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+.tableFrame .tableRight .expiredCoupon {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 30px;
+}
+.tableFrame .tableRight .expiredCoupon .Coupon2 {
+  width: 600px;
+  height: 180px;
+  background-color: black;
+  display: flex;
+  margin-bottom: 30px;
+}
+.tableFrame .tableRight .expiredCoupon .Coupon2 .CouponLeft {
+  width: 30%;
+  height: 100%;
+  border-right: 2px solid white;
+}
+.tableFrame .tableRight .expiredCoupon .Coupon2 .CouponLeft .CouponIcon {
+  width: 100%;
+}
+.tableFrame .tableRight .expiredCoupon .Coupon2 .CouponLeft .CouponIcon .shoppingIcon {
+  color: white;
+  font-size: 100px;
+  width: 100%;
+}
+.tableFrame .tableRight .expiredCoupon .Coupon2 .CouponLeft .CouponContent {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #fb570b;
+  padding-bottom: 15px;
+}
+.tableFrame .tableRight .expiredCoupon .Coupon2 .CouponRight {
+  width: 70%;
+}
+.tableFrame .tableRight .expiredCoupon .Coupon2 .CouponRight .CouponUp {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.tableFrame .tableRight .expiredCoupon .Coupon2 .CouponRight .CouponUp .discount {
+  color: #fb570b;
+  font-size: 40px;
+  font-weight: bold;
+  padding-top: 40px;
+  padding-left: 20px;
+}
+.tableFrame .tableRight .expiredCoupon .Coupon2 .CouponRight .CouponUp .lowest {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+}
+.tableFrame .tableRight .expiredCoupon .Coupon2 .CouponRight .CouponDown {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.tableFrame .tableRight .expiredCoupon .Coupon2 .CouponRight .CouponDown .date {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  align-self: center;
+  padding-left: 20px;
+}
+.tableFrame .tableRight .expiredCoupon .Coupon2 .CouponRight .CouponDown .rules {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 20px;
+  align-self: center;
+  padding: 20px;
+}/*# sourceMappingURL=coupon.css.map */

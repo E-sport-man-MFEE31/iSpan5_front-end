@@ -1,0 +1,124 @@
+footer {
+  background-color: #141414;
+  width: 100%;
+  height: 150px;
+  min-height: 150px;
+  color: #c3c7cf;
+  font-weight: bold;
+  font-family: "Monda", sans-serif;
+
+  div {
+    margin: 0px auto;
+
+    nav {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      width: 60vw;
+      ul {
+        padding: 10px 0px 0px 0px;
+        width: 100%;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        li {
+          margin-left: 2rem;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .line {
+      margin: 0 auto;
+      height: 1px;
+      width: 65vw;
+      background-color: #c3c7cf;
+    }
+
+    div {
+      display: flex;
+
+      div {
+        display: flex;
+        justify-content: center;
+        width: 60vw;
+        margin-top: 10px;
+
+        div {
+          width: 55vw;
+          cursor: pointer;
+        }
+        .icon-group {
+          width: 5vw;
+          svg {
+            color: #c3c7cf;
+            display: block;
+            width: 18px;
+            height: 18px;
+            margin-left: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  footer {
+    height: 150px;
+
+    .line {
+      display: none;
+    }
+
+    div {
+      div {
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+
+        div {
+          width: 100%;
+        }
+
+        .icon-group {
+          display: none;
+
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 998px) {
+  footer {
+    height: 500px;
+
+    div {
+      width: 100%;
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        ul {
+          padding: 10px 0px 0px 0px;
+          width: 100%;
+          list-style-type: none;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          align-items: center;
+
+          li {
+            text-align: center;
+            margin-bottom: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+}

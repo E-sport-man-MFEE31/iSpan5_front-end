@@ -1,0 +1,23 @@
+.bank-transfer {
+  max-width: 1200px;
+  margin: 70px auto;
+  padding: 100px;
+}
+.bank-transfer .line {
+  width: 50px;
+  height: 400px;
+  border-right: 1px solid #c3c7cf;
+}
+.bank-transfer .right-transfer Button {
+  width: auto;
+  height: auto;
+}
+.bank-transfer .right-transfer .transfer-time {
+  width: 100%;
+}
+.bank-transfer .right-transfer .transfer-time .date {
+  width: 100%;
+}
+.bank-transfer .right-transfer .transfer-time .send {
+  width: 90%;
+}/*# sourceMappingURL=BankTransfer.css.map */

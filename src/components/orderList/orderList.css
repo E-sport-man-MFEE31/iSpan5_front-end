@@ -1,0 +1,379 @@
+.title {
+  width: 50%;
+  margin: 0 auto;
+  justify-content: center;
+}
+.title .titleFirst {
+  color: #fb570b;
+}
+
+.Nav-title {
+  padding-bottom: 40px;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 15px;
+}
+.Nav-title .detailPath .homeIcon {
+  font-size: 22px;
+}
+.Nav-title .detailPath .myOrder {
+  color: #fb570b;
+}
+
+.tableFrame {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+  padding-bottom: 60px;
+}
+.tableFrame .tableLeft {
+  width: 20%;
+}
+.tableFrame .tableLeft ul {
+  list-style: none;
+  padding: 0px;
+}
+.tableFrame .tableLeft ul li {
+  margin-bottom: 40px;
+}
+.tableFrame .tableLeft ul li .btnLink {
+  padding: 15px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  color: hsla(0deg, 0%, 0%, 0.74);
+}
+.tableFrame .tableLeft ul li .btnHover {
+  background-color: white;
+}
+.tableFrame .tableLeft ul li .btnHover:hover {
+  background-color: #fc8f05;
+}
+.tableFrame .tableRight {
+  width: 80%;
+}
+.tableFrame .tableRight .statusSearch .orderStatus {
+  display: flex;
+  justify-content: end;
+}
+.tableFrame .tableRight .statusSearch .orderStatus .btnGroup {
+  display: grid;
+  width: 400px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 7px;
+}
+.tableFrame .tableRight .statusSearch .orderStatus .btnGroup .btnFirst {
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 0;
+  border: 1px solid #fc8f05;
+  background-color: #fc8f05;
+}
+.tableFrame .tableRight .statusSearch .orderStatus .btnGroup .btnFirst:hover {
+  background-color: hwb(34 9% 0%);
+}
+.tableFrame .tableRight .statusSearch .orderStatus .btnGroup .btnSecond {
+  padding: 5px;
+  font-size: 10px;
+  border-radius: 0;
+  border: 1px solid #c3c7cf;
+  background-color: #c3c7cf;
+}
+.tableFrame .tableRight .statusSearch .orderStatus .btnGroup .btnSecond:hover {
+  background-color: hsl(222deg, 8%, 74%);
+}
+.tableFrame .tableRight .inputs {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.tableFrame .tableRight .inputs .inputGroup {
+  display: flex;
+  width: 380px;
+}
+.tableFrame .tableRight .inputs .inputGroup .inputSearch {
+  width: 300px;
+  border-radius: 5px 0 0 5px;
+}
+.tableFrame .tableRight .inputs .inputGroup .btnSearch {
+  border-radius: 0 5px 5px 0;
+  width: 80px;
+  height: 40px;
+  font-weight: bold;
+  color: white;
+  background-color: #fb570b;
+}
+.tableFrame .tableRight .inputs .inputGroup .btnSearch:hover {
+  background-color: hsl(19deg, 91%, 50%);
+  color: white;
+}
+
+table {
+  width: 100%;
+}
+table tr {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.326);
+}
+table tr th {
+  color: black;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.482);
+  text-align: center;
+  font-size: 18px;
+}
+table tr td {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.482);
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px 5px;
+}
+table tr td .btnDetail {
+  border: 1px solid #fc8f05;
+  border-radius: 13px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 125px;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #fc8f05;
+  color: hsla(0deg, 0%, 0%, 0.74);
+}
+table tr td .btnDetail:hover {
+  background-color: hwb(34 9% 0%);
+}
+table tr td .btnDetail .btnContent {
+  text-decoration: none;
+  color: black;
+}
+table tr .OrderNumber {
+  color: #fb570b;
+}
+table .borderNone {
+  border-bottom: 1px solid transparent;
+}
+table .OrderSpecial td {
+  color: black;
+}
+table .OrderSpecial td .btnInvalid {
+  border: 2px solid #fc8f05;
+  border-radius: 13px;
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 125px;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: hsla(0deg, 0%, 0%, 0.74);
+}
+table .OrderSpecial td .btnInvalid:hover {
+  background-color: hwb(34 9% 0%);
+}
+
+.paginationUl {
+  margin-top: 30px;
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  align-content: center;
+}
+
+@media screen and (min-width: 430px) and (max-width: 650px) {
+  .title {
+    width: 70% !important;
+  }
+  .tableFrame {
+    display: block !important;
+  }
+  .tableFrame .tableLeft {
+    width: 100% !important;
+  }
+  .tableFrame .tableLeft ul {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .tableFrame .tableLeft ul li .btnLink {
+    padding: 5px 9px !important;
+    font-size: 18px !important;
+    background-color: white !important;
+  }
+  .tableFrame .tableLeft ul li .btnLink:hover {
+    background-color: #fc8f05 !important;
+  }
+  .tableFrame .tableLeft ul li .btnLink .btnClick {
+    background-color: #fc8f05 !important;
+  }
+  .tableFrame .tableRight {
+    width: 100% !important;
+  }
+  .tableFrame .tableRight .statusSearch .orderStatus {
+    margin: 0 auto;
+    justify-content: center !important;
+  }
+  .tableFrame .tableRight .statusSearch .orderStatus .btnGroup .btnFirst {
+    padding: 3px 2px !important;
+    font-size: 10px !important;
+  }
+  .tableFrame .tableRight .statusSearch .orderStatus .btnGroup .btnSecond {
+    padding: 3px 2px !important;
+    font-size: 10px !important;
+  }
+  .tableFrame .tableRight .inputs {
+    display: flex;
+    justify-content: center !important;
+  }
+  .tableFrame .tableRight .inputs .inputGroup {
+    width: 330px !important;
+  }
+  .tableFrame .tableRight .inputs .inputGroup .inputSearch {
+    width: 80% !important;
+    font-size: 15px;
+  }
+  .tableFrame .tableRight .inputs .inputGroup .btnSearch {
+    font-size: 15px;
+    width: 20% !important;
+    height: 40px;
+    font-weight: bold;
+    color: white;
+    background-color: #fb570b;
+  }
+  .tableFrame .tableRight .inputs .inputGroup .btnSearch:hover {
+    background-color: hsl(19deg, 91%, 50%);
+    color: white;
+  }
+  .tableFrame .tableRight table {
+    width: 100%;
+  }
+  .tableFrame .tableRight table tr .dNone {
+    display: none !important;
+  }
+  .tableFrame .tableRight table tr th {
+    width: 30% !important;
+    padding: 5px !important;
+  }
+  .tableFrame .tableRight table tr td {
+    font-size: 15px !important;
+  }
+  .tableFrame .tableRight table tr td .btnDetail {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 90px;
+    font-size: 15px !important;
+  }
+  .tableFrame .tableRight .paginationUl {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 651px) and (max-width: 885px) {
+  .title {
+    width: 70% !important;
+  }
+  .tableFrame {
+    display: block !important;
+  }
+  .tableFrame .tableLeft {
+    width: 100% !important;
+  }
+  .tableFrame .tableLeft ul {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+  .tableFrame .tableLeft ul li .btnLink {
+    padding: 5px 9px !important;
+    font-size: 18px !important;
+    background-color: white !important;
+  }
+  .tableFrame .tableLeft ul li .btnLink:hover {
+    background-color: #fc8f05 !important;
+  }
+  .tableFrame .tableLeft ul li .btnLink .btnClick {
+    background-color: #fc8f05 !important;
+  }
+  .tableFrame .tableRight {
+    width: 100% !important;
+  }
+  .tableFrame .tableRight .statusSearch .orderStatus {
+    margin: 0 auto;
+    justify-content: center !important;
+  }
+  .tableFrame .tableRight .statusSearch .orderStatus .btnGroup .btnFirst {
+    padding: 3px 2px !important;
+    font-size: 10px !important;
+  }
+  .tableFrame .tableRight .statusSearch .orderStatus .btnGroup .btnSecond {
+    padding: 3px 2px !important;
+    font-size: 10px !important;
+  }
+  .tableFrame .tableRight .inputs {
+    display: flex;
+    justify-content: center !important;
+  }
+  .tableFrame .tableRight .inputs .inputGroup {
+    width: 400px !important;
+  }
+  .tableFrame .tableRight .inputs .inputGroup .inputSearch {
+    width: 80% !important;
+    font-size: 15px;
+  }
+  .tableFrame .tableRight .inputs .inputGroup .btnSearch {
+    font-size: 15px;
+    width: 20% !important;
+    height: 40px;
+    font-weight: bold;
+    color: white;
+    background-color: #fb570b;
+  }
+  .tableFrame .tableRight .inputs .inputGroup .btnSearch:hover {
+    background-color: hsl(19deg, 91%, 50%);
+    color: white;
+  }
+  .tableFrame .tableRight table {
+    width: 100%;
+  }
+  .tableFrame .tableRight table tr .dNone {
+    display: none !important;
+  }
+  .tableFrame .tableRight table tr th {
+    width: 30% !important;
+    padding: 5px !important;
+  }
+  .tableFrame .tableRight table tr td {
+    font-size: 15px !important;
+  }
+  .tableFrame .tableRight table tr td .btnDetail {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 90px;
+    font-size: 15px !important;
+  }
+  .tableFrame .tableRight .paginationUl {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 886px) and (max-width: 1200px) {
+  .tableFrame .tableLeft ul {
+    height: 100%;
+    padding-top: 200px !important;
+  }
+  .tableFrame .tableLeft ul li {
+    margin-bottom: 30px;
+  }
+  .tableFrame .tableLeft ul li .btnLink {
+    font-size: 15px;
+  }
+  .tableFrame .tableRight .statusSearch .orderStatus .btnGroup {
+    width: 360px;
+  }
+  .tableFrame .tableRight .statusSearch .orderStatus .btnGroup .btnFirst {
+    font-size: 10px;
+  }
+  .tableFrame .tableRight .statusSearch .orderStatus .btnGroup .btnSecond {
+    font-size: 8px;
+  }
+}/*# sourceMappingURL=orderList.css.map */
