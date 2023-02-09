@@ -1,12 +1,15 @@
 import OrderPath from "./OrderPath";
 import SideBar from "../reUseable/SideBar";
 import OrderTable from "./OrderTable";
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
 
 import "./orderList.scss";
 
 function OrderList() {
   return (
     <>
+      <Header />
       <div className="title py-5 d-flex">
         <h2 className="fw-bold titleFirst">我</h2>
         <h2 className="fw-bold">的訂單</h2>
@@ -24,6 +27,7 @@ function OrderList() {
           <OrderTable />
         </div>
       </div>
+      <Footer />
     </>
   );
 }
