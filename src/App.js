@@ -96,7 +96,7 @@ const App = () => {
                 element={<DashBroad />}
               ></Route>
               <Route
-                path="/dashboard/couponSeller"
+                path="/dashboard/orderSeller/:sellerid"
                 element={<DashBroad />}
               />
               <Route path="*" element={<Page404 />}></Route>

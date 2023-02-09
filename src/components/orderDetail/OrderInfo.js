@@ -14,74 +14,130 @@ function OrderInfo({
 }) {
   return (
     <>
-      <div className="FirstBox d-flex">
+      <div className="FirstBox">
         <div className="boxes">
-          <h3 className="py-3 mt-3">訂單資訊</h3>
-
-          <p>
-            訂單號碼 : {orId}
+          <div className="orderInfo py-3 mt-3">
+            訂單資訊
+          </div>
+          <div className="contentInfo">
+            <div className="d-flex content">
+              <div>訂單號碼 :</div>
+              <div>&nbsp;{orId}</div>
+            </div>
             <br />
-            訂單電郵 : {recip_email}
+            <div className="d-flex content">
+              <div>訂單電郵 :</div>
+              <div>&nbsp;{recip_email}</div>
+            </div>
             <br />
-            訂單日期 : {date}
-          </p>
+            <div className="d-flex content">
+              <div>訂單日期 : </div>
+              <div>&nbsp;{date}</div>
+            </div>
+          </div>
         </div>
         <div className="boxes">
-          <h3 className="py-3 mt-3">顧客資訊</h3>
-
-          <p>
-            名稱 : {name}
+          <div className="orderInfo py-3 mt-3">
+            顧客資訊
+          </div>
+          <div className="contentInfo">
+            <div className="d-flex content">
+              <div>名稱 : </div>
+              <div>&nbsp;{name}</div>
+            </div>
             <br />
-            電話號碼 : {phone}
-          </p>
+            <div className="d-flex content">
+              <div>電話號碼 : </div>
+              <div>&nbsp;{phone}</div>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="SecondBox d-flex">
+      <div className="FirstBox">
         <div className="boxes">
-          <h3 className="py-3 mt-3">送貨資訊</h3>
-
-          <p>
-            送貨方式 : {deliWay}
+          <div className="orderInfo py-3 mt-3">
+            送貨資訊
+          </div>
+          <div className="contentInfo">
+            <div className="d-flex content">
+              <div>送貨方式 :</div>
+              <div>&nbsp;{deliWay}</div>
+            </div>
             <br />
-            <button className="sevenEleven">
-              7-11物流追蹤
-            </button>
+            <div>
+              <button className="sevenEleven">
+                7-11物流追蹤
+              </button>
+            </div>
             <br />
-            送貨狀態 : {dStatus}
+            <div className="d-flex content">
+              <div>送貨狀態 : </div>
+              <div>&nbsp;{dStatus}</div>
+            </div>
             <br />
-            收件人姓名 : {recip_name}
+            <div className="d-flex content">
+              <div>收件人姓名 : </div>
+              <div>&nbsp;{recip_name}</div>
+            </div>
             <br />
-            收件人電話號碼 : {recip_phone}
+            <div className="d-flex content">
+              <div>收件人電話號碼 : </div>
+              <div>&nbsp;{recip_phone}</div>
+            </div>
             <br />
-            收件地址 : {recip_address}
-            <br />
-          </p>
+            <div className="d-flex content">
+              <div>收件地址 : </div>
+              <div>&nbsp;{recip_address}</div>
+            </div>
+          </div>
         </div>
         <div className="boxes">
-          <h3 className="py-3 mt-3">付款資訊</h3>
-
-          <p>
-            付款方式 : {type_name}
+          <div className="orderInfo py-3 mt-3">
+            付款資訊
+          </div>
+          <div className="contentInfo">
+            <div className="d-flex content">
+              <div>付款方式 :</div>
+              <div>&nbsp;{type_name}</div>
+            </div>
             <br />
-            付款狀態 : {orderStatus}
+            <div className="d-flex content">
+              <div>付款狀態 : </div>
+              <div>&nbsp;{orderStatus}</div>
+            </div>
             <br />
-            付款指示 :
+            <div className="content">付款指示 :</div>
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;戶名
-            : 電競人股份有限公司
+            <div className="contentPay">
+              <div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;戶名
+                : 電競人股份有限公司
+              </div>
+            </div>
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中國信託銀行敦南分行
+            <div className="contentPay">
+              <div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中國信託銀行敦南分行
+              </div>
+            </div>
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;帳號
-            : 111-222-444866 ATM : 822
+            <div className="contentPay">
+              <div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;帳號
+                : 111-222-444866 ATM : 822
+              </div>
+            </div>
             <br />
-            發票狀態 : 沒有此表格
+            <div className="d-flex content">
+              <div>發票類型 :</div>
+              <div>雲端發票</div>
+            </div>
             <br />
-            發票申請類型 : 雲端發票(沒有此表格)
-            <br />
-            發票載去類型 : 會員載具 (admin@test.com)
-            沒有此表格
-          </p>
+            <div className="d-flex content">
+              <div>載具類型 : </div>
+              <div>會員載具 (發票會寄至您的電郵)</div>
+            </div>
+          </div>
         </div>
       </div>
     </>

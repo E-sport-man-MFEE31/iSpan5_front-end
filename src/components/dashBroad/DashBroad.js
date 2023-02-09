@@ -7,7 +7,7 @@ import {
 } from "@ant-design/icons";
 import { Layout, Menu, theme } from "antd";
 import React, { useState } from "react";
-// import OrderListSeller from "./orderListSellersAdmin/OrderListSeller";
+import OrderListSeller from "./OrderListSeller";
 import CouponSeller from "./couponTodo/CouponSeller";
 
 const { Header, Sider, Content } = Layout;
@@ -94,8 +94,8 @@ const App = () => {
             background: colorBgContainer,
           }}
         >
-          {/* <OrderListSeller /> */}
-          <CouponSeller />
+          <OrderListSeller />
+          {/* <CouponSeller /> */}
         </Content>
       </Layout>
     </Layout>

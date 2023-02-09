@@ -1,7 +1,5 @@
 import FunctionToggle from "../reUseable/SideBar";
-import OrderPrice from "./OrderPrice";
 import DetailTable from "./detail/DetailTable";
-import OrderCoupon from "./OrderCoupon";
 import OrderInfo from "./OrderInfo";
 import OrderComment from "./OrderComment";
 import DetailPath from "./detail/DetailPath";
@@ -43,23 +41,88 @@ function OrderDetail() {
           <DetailNumber content={content} />
         </div>
       </div>
-      <div className="tableFrame d-flex">
+      <div className="tableFrames">
         <div className="tableLeft">
           <FunctionToggle />
         </div>
         <div className="tableRight">
-          <DetailTable content={content} />
-          <div className="Coupon">
-            <OrderCoupon />
-          </div>
-          <div className="subtotal pb-5">
-            <OrderPrice content={content} />
-          </div>
+          {content.map((v, i) => {
+            const {
+              orId,
+              company_name,
+              product_name,
+              price,
+              amount,
+              payment_price,
+              delivery_fee,
+            } = v;
+            return (
+              <DetailTable
+                content={content}
+                orId={orId}
+                company_name={company_name}
+                product_name={product_name}
+                price={price}
+                amount={amount}
+                payment_price={payment_price}
+                delivery_fee={delivery_fee}
+              />
+            );
+          })}
           <div className="underBox">
-            <OrderInfo content={content} />
+            {content.map((v, i) => {
+              const {
+                orId,
+                recip_email,
+                date,
+                name,
+                phone,
+                type_name,
+                dStatus,
+                deliWay,
+                recip_name,
+                recip_phone,
+                recip_address,
+                orderStatus,
+              } = v;
+              return (
+                <OrderInfo
+                  orId={orId}
+                  recip_email={recip_email}
+                  date={date}
+                  name={name}
+                  phone={phone}
+                  type_name={type_name}
+                  dStatus={dStatus}
+                  deliWay={deliWay}
+                  recip_name={recip_name}
+                  recip_phone={recip_phone}
+                  recip_address={recip_address}
+                  orderStatus={orderStatus}
+                />
+              );
+            })}
           </div>
           <div className="comments">
-            <OrderComment />
+            {content.map((v, i) => {
+              const {
+                company_name,
+                product_id,
+                orId,
+                sellers_id,
+                user_id,
+              } = v;
+              return (
+                <OrderComment
+                  company_name={company_name}
+                  content={content}
+                  orId={orId}
+                  product_id={product_id}
+                  sellers_id={sellers_id}
+                  user_id={user_id}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

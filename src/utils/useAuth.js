@@ -7,7 +7,7 @@ import React, {
 const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState({
+  const [currentUser, setCurrentUser] = useState(window.localStorage.getItem("user") !== null ? JSON.parse(window.localStorage.getItem("user")) : {
     token: "",
     member: "",
   });

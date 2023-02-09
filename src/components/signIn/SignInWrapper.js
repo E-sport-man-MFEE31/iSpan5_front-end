@@ -6,24 +6,10 @@ import axios from "axios";
 
 export default function SignInWrapper() {
   const handleFBLogin = async () => {
-    await axios
-      .get("http://localhost:8080/auth/facebook")
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+    window.open("http://localhost:8080/auth/facebook", "_self");
   };
   const handleGoogleLogin = async () => {
-    await axios
-      .get("http://localhost:8080/auth/google")
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+    window.open("http://localhost:8080/auth/google", "_self");
   };
   return (
     <>
@@ -50,7 +36,7 @@ export default function SignInWrapper() {
           使用Google登入
         </button>
         <div className="signIn_wrap">
-          <Link href="/#">免費註冊會員</Link>
+          <Link to="/register">免費註冊會員</Link>
           &nbsp;&nbsp;|&nbsp;&nbsp;
           <Link href="/#">忘記密碼</Link>
         </div>

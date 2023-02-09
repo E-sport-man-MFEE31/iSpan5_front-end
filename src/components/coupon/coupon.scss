@@ -12,8 +12,8 @@ $gray-color: #c3c7cf;
     color: $main-color;
   }
 }
-.title {
-  width: 40%;
+.titleCoupon {
+  width: 70%;
   margin: 0 auto;
   margin-top: 30px;
   .titleContent {
@@ -29,12 +29,15 @@ $gray-color: #c3c7cf;
   }
 }
 .tableFrame {
+  display: flex;
   width: 80%;
   margin: 0 auto;
   padding: 20px 0;
   padding-bottom: 60px;
   .tableLeft {
     width: 20%;
+    display: flex;
+    align-items: center;
     ul {
       list-style: none;
       padding: 0px;
@@ -74,6 +77,16 @@ $gray-color: #c3c7cf;
         font-size: 20px;
         font-weight: bold;
         padding-bottom: 15px;
+      }
+      .couponRules {
+        font-size: 15px;
+        font-weight: bold;
+        border: 1px solid $main-color;
+        margin-bottom: 15px;
+        &:hover {
+          border: $sub-color;
+          background-color: $sub-color;
+        }
       }
       .btnAll {
         background-color: $sub-color;
@@ -136,12 +149,6 @@ $gray-color: #c3c7cf;
               padding-top: 40px;
               padding-left: 20px;
             }
-            .lowest {
-              color: white;
-              font-size: 20px;
-              font-weight: bold;
-              padding: 20px;
-            }
           }
           .CouponDown {
             width: 100%;
@@ -158,7 +165,6 @@ $gray-color: #c3c7cf;
             .rules {
               color: white;
               font-weight: bold;
-              text-decoration: underline;
               font-size: 20px;
               align-self: center;
               padding: 20px;
@@ -167,89 +173,82 @@ $gray-color: #c3c7cf;
         }
       }
     }
-    .expired {
-      width: 100%;
-      border-bottom: 4px solid #00000073;
-      .expiredWord {
-        font-size: 20px;
-        font-weight: bold;
-        padding-bottom: 15px;
+  }
+}
+.paginationUl {
+  width: 100%;
+  padding-left: 0;
+}
+
+@media screen and (min-width: 430px) and (max-width: 650px) {
+  .tableFrame{
+    display: block;
+    .tableLeft {
+      width: 100% !important;
+      ul {
+        width: 100% !important;
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        li {
+          .btnLink {
+            padding: 5px 9px !important;
+            font-size: 18px !important;
+            background-color: white !important;
+            &:hover {
+              background-color: $sub-color !important;
+            }
+            .btnClick {
+              background-color: $sub-color !important;
+            }
+          }
+        }
       }
     }
-    .expiredCoupon {
-      width: 100%;
-      height: fit-content;
-      padding: 30px;
-      .Coupon2 {
-        width: 600px;
-        height: 180px;
-        background-color: black;
-        display: flex;
-        margin-bottom: 30px;
+    .unExpiredCoupon {
+      padding: 30px 5px !important;
+      .Coupon1 {
+        width: 350px !important;
+        margin: 30px auto !important;
+        height: 150px !important;
         .CouponLeft {
-          width: 30%;
-          height: 100%;
-          border-right: 2px solid white;
           .CouponIcon {
             width: 100%;
             .shoppingIcon {
-              color: white;
-              font-size: 100px;
-              width: 100%;
+              font-size: 75px !important;
             }
           }
           .CouponContent {
-            font-size: 20px;
-            text-align: center;
-            font-weight: bold;
-            color: $main-color;
-            padding-bottom: 15px;
+            font-size: 18px !important;
           }
         }
         .CouponRight {
           width: 70%;
           .CouponUp {
-            width: 100%;
-            height: 50%;
-            display: flex;
-            justify-content: space-between;
             .discount {
-              color: $main-color;
-              font-size: 40px;
-              font-weight: bold;
-              padding-top: 40px;
-              padding-left: 20px;
-            }
-            .lowest {
-              color: white;
-              font-size: 20px;
-              font-weight: bold;
-              padding: 20px;
+              font-size: 26px !important;
             }
           }
           .CouponDown {
-            width: 100%;
-            height: 50%;
-            display: flex;
-            justify-content: space-between;
             .date {
-              color: white;
-              font-weight: bold;
-              font-size: 20px;
-              align-self: center;
-              padding-left: 20px;
+              font-size: 15px !important;
             }
             .rules {
-              color: white;
-              font-weight: bold;
-              text-decoration: underline;
-              font-size: 20px;
-              align-self: center;
-              padding: 20px;
+              font-size: 13px !important;
+              padding: 20px !important;
             }
           }
         }
       }
     }
+  }
+}
+@media screen and (min-width: 651px) and (max-width: 800px) {
+  .Coupon1 {
+    width: 500px !important;
+  }
+}
+@media screen and (min-width: 880px) and (max-width: 1200px) {
+  .Coupon1 {
+    width: 500px !important;
   }
 }
