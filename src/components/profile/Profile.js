@@ -8,8 +8,11 @@ import Header from "../header/Header";
 import Footer from "../footer/Footer";
 
 import "./profile.scss";
+import { Link } from "react-router-dom";
+import { useAuth } from "../../utils/useAuth";
 
 function Profile() {
+  const { currentUser } = useAuth();
   const [userData, setUserData] = useState({});
   const [isEdit, setIsEdit] = useState(false);
   const [name, setName] = useState();
@@ -17,6 +20,7 @@ function Profile() {
   const [phone, setPhone] = useState();
   const [address, setAddress] = useState();
   const [image, setImage] = useState();
+  const [isSeller, setIsSeller] = useState();
 
   // 選擇的檔案
   const [selectedFile, setSelectedFile] = useState(null);
@@ -40,16 +44,18 @@ function Profile() {
 
   async function getData() {
     let response = await axios.get(
-      `http://localhost:8080/api/profile/1`
+      `http://localhost:8080/api/profile/${currentUser.member.id}`
     );
     let result = response.data.user;
+    let isSeller = response.data.seller;
     console.log(response.data.user);
     setUserData(result[0]);
-    setName(result[0].name);
-    setEmail(result[0].email);
-    setAddress(result[0].address);
-    setPhone(result[0].phone);
+    setName(currentUser.member.name);
+    setEmail(currentUser.member.email);
+    setAddress(currentUser.member.address);
+    setPhone(currentUser.member.phone);
     setImage("http://localhost:8080" + result[0].thumbnail);
+    setIsSeller(isSeller.length > 0 ? true : false);
   }
 
   useEffect(() => {
@@ -105,7 +111,7 @@ function Profile() {
           <div className="profileInfo">
             <ProfileInfo
               userData={userData}
-              setUserData={setUserData}
+              isEdit={isEdit}
               name={name}
               setName={setName}
               email={email}
@@ -114,35 +120,34 @@ function Profile() {
               setPhone={setPhone}
               address={address}
               setAddress={setAddress}
-              isEdit={isEdit}
               changeHandler={changeHandler}
             />
           </div>
           <div className="profileStatus">
             <div className="profilePhoto">
-              {!!image ? (
-                <img
-                  src={preview || image}
-                  alt="profileImage"
-                  className="profileImage"
-                />
-              ) : (
-                <img
-                  src="./images/profileImage.jpg"
-                  alt="profileImage"
-                  className="profileImage"
-                />
-              )}
+              <img
+                src="./images/profileImage.jpg"
+                alt="profileImage"
+                className="profileImage"
+              />
             </div>
-            <div className="profileName">Jodie</div>
-            <div className="authorityStatus">
-              認證狀態 : 買家
-            </div>
+            <div className="profileName">{name}</div>
+
+            {isSeller ? (
+              <div className="authorityStatus">
+                認證狀態 : 賣家
+              </div>
+            ) : (
+              <div className="authorityStatus">
+                認證狀態 : 買家
+              </div>
+            )}
+
             {isEdit ? (
               <>
                 <div className="btns">
                   <button
-                    className="btnComplete fw-bold"
+                    className="btn btn-primary fw-bold"
                     onClick={() => {
                       setIsEdit(false);
                       updateProfile();
@@ -150,6 +155,16 @@ function Profile() {
                   >
                     完成修改
                   </button>
+                  {!isSeller ? (
+                    <Link
+                      to="/profile/verifySeller"
+                      className="btn btn-secondary fw-bold"
+                    >
+                      驗證成賣家
+                    </Link>
+                  ) : (
+                    <></>
+                  )}
                 </div>
               </>
             ) : (

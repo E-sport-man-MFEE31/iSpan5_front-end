@@ -32,6 +32,8 @@ $gray-color: #c3c7cf;
   padding-bottom: 60px;
   .tableLeft {
     width: 20%;
+    display: flex;
+    align-content: center;
     ul {
       list-style: none;
       padding: 0px;
@@ -67,6 +69,7 @@ $gray-color: #c3c7cf;
           grid-column-gap: 7px;
 
           .btnFirst {
+            font-weight: bold;
             padding: 5px;
             font-size: 15px;
             border-radius: 0;
@@ -77,6 +80,7 @@ $gray-color: #c3c7cf;
             }
           }
           .btnSecond {
+            font-weight: bold;
             padding: 5px;
             font-size: 10px;
             border-radius: 0;
@@ -383,18 +387,6 @@ table {
 }
 @media screen and (min-width: 886px) and (max-width: 1200px) {
   .tableFrame {
-    .tableLeft {
-      ul {
-        height: 100%;
-        padding-top: 200px !important;
-        li {
-          margin-bottom: 30px;
-          .btnLink {
-            font-size: 15px;
-          }
-        }
-      }
-    }
     .tableRight {
       .statusSearch {
         .orderStatus {

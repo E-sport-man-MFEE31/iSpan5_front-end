@@ -1,7 +1,7 @@
 function OrderCoupon() {
   return (
     <>
-      <div className="fw-bold py-3 ms-2 mt-3">
+      <div className="fw-bold py-3 ms-2 mt-3 usedCoupon">
         已使用過的優惠券
       </div>
       <div className="d-flex my-3">

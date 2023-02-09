@@ -13,7 +13,7 @@ $gray-color: #c3c7cf;
   }
 }
 .title {
-  width: 40%;
+  width: 70%;
   margin: 0 auto;
   h2 {
     text-align: center;
@@ -22,27 +22,29 @@ $gray-color: #c3c7cf;
     color: $main-color;
   }
 }
-.tableFrame {
+.tableFrames {
+  display: flex;
   width: 80%;
   margin: 0 auto;
   padding: 20px 0;
   padding-bottom: 60px;
   .tableLeft {
     width: 20%;
+    display: flex;
     ul {
+      align-self: flex-start;
       list-style: none;
       padding: 0px;
       li {
         padding: 10px;
-        button {
-          margin-bottom: 10px;
-          width: 125px;
-          border-radius: 13px;
-          padding-top: 10px;
-          padding-bottom: 10px;
+        margin-bottom: 40px;
+        .btnLink {
+          padding: 15px 20px;
+          text-decoration: none;
+          border-radius: 10px;
           font-weight: bold;
-          color: hsla(0, 0%, 0%, 0.74);
           font-size: 20px;
+          color: hsla(0, 0%, 0%, 0.74);
         }
         .btnHover {
           background-color: white;
@@ -58,43 +60,164 @@ $gray-color: #c3c7cf;
   }
   .tableRight {
     width: 80%;
-    .sellerInfo {
-      width: 100%;
-      height: 60px;
-      background-color: #c3c7cf;
-      padding: 10px;
-      h2 {
+    .accordionChange {
+      margin-bottom: 50px;
+      .btnLook {
+        background-color: $sub-color;
+        border: 1px solid $sub-color;
         color: white;
-        text-align: left;
         font-weight: bold;
+        margin-left: 20px;
+        border-radius: 0;
+        display: flex;
+        align-content: center;
+        .btnWord {
+          margin: 0;
+        }
+        &:hover {
+          color: white;
+          background-color: hwb(34 24% 2%);
+          border: 1px solid hwb(34 24% 2%);
+          
+        }
       }
-    }
-    .subtotal {
-      display: flex;
-      justify-content: end;
-      margin: 0;
-      ul {
-        width: 400px;
+      
+      .sellerInfo {
+        width: 100%;
+        height: 60px;
+        background-color: #c3c7cf;
+        padding: 10px;
+        h2 {
+          color: white;
+          text-align: left;
+          font-weight: bold;
+        }
+      }
+      .subtotal {
+        display: flex;
+        justify-content: end;
+        margin: 0;
+        padding: 30px;
+        ul {
+          width: 400px;
+          font-size: 20px;
+          list-style-type: none;
+          li {
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            color: rgba(0, 0, 0, 0.696);
+          }
+        }
+      }
+      .Coupon {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.326);
         font-size: 20px;
-        list-style-type: none;
-        li {
-          display: flex;
-          justify-content: space-between;
-          padding: 10px;
+        
+        .couponSticker {
+          padding: 10px 15px;
+          text-align: center;
+          background-color: $main-color;
+          color: white;
+          font-weight: bold;
         }
       }
     }
-    .Coupon {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.326);
-      font-size: 20px;
-      .couponSticker {
-        padding: 10px 15px;
-        text-align: center;
-        background-color: $main-color;
-        color: white;
-        font-weight: bold;
+    
+  }
+}
+.underBox {
+  width: 100%;
+  height: fit-content;
+  border: 2px solid $gray-color;
+  .FirstBox,
+  .SecondBox {
+    display: flex;
+    width: 100%;
+    .boxes {
+      width: 50%;
+    }
+  }
+  .orderInfo {
+    font-size: 23px;
+    font-weight: bold;
+    margin-left: 20px;
+
+  }
+  .contentInfo {
+    line-height: 25px;
+    padding-left: 20px;
+    font-size: 20px;
+    width: 100%;
+    padding-bottom: 30px;
+    .sevenEleven {
+      width: 160px;
+      height: 40px;
+      background-color: black;
+      padding: 0;
+      border-radius: 10px;
+      color: white;
+      &:hover {
+        background-color: #000000cc;
       }
     }
+  }
+}
+.comments {
+  width: 100%;
+  .commentsTitle {
+      font-weight: bold;
+      padding: 20px;
+      margin: 0;
+  }
+  .tag {
+    align-self: center;
+    .good {
+      font-weight: bold;
+      color: white;
+      margin: 5px;
+      align-items: center;
+      &:hover {
+        border-color: $sub-color;
+        background-color: $sub-color;
+      }
+    }
+  }
+  .commentsStars {
+    padding-left: 30px;
+    padding-right: 20px;
+    .stars {
+      display: flex;
+      align-items: center;
+      .star {
+          font-size: 30px;
+          color: $sub-color;
+      }
+  }
+  }
+  
+  .textField {
+      padding: 20px;
+  }
+  .textFieldFinish{
+      padding: 40px;
+  }
+  .btnSubmit {
+      padding: 10px 15px;
+      text-align: center;
+      background-color: $sub-color;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      width: 140px;
+      border-color: $sub-color;
+      border-radius: 15px;
+      &:hover {
+        border-color: hsl(34, 99%, 53%);
+          background-color: hsl(34, 99%, 53%);
+          color: white;
+      }
   }
 }
 table {
@@ -113,86 +236,364 @@ table {
     td {
       text-align: center;
       font-size: 20px;
-      .imageFrame {
-        width: 40%;
-        .computerImage {
-          margin-top: 5px;
-          margin-bottom: 5px;
-          width: 80%;
-        }
-      }
-      .imageWords {
-        height: 150px;
-        width: 60%;
-      }
+      width: 20%;
     }
     .productInfo {
-      width: 400px;
-    }
-  }
-}
-.underBox {
-  width: 100%;
-  height: 860px;
-  border: 2px solid $gray-color;
-  .FirstBox,
-  .SecondBox {
-    width: 100%;
-    .boxes {
-      width: 50%;
-    }
-  }
-  h3 {
-    font-weight: bold;
-    margin-left: 20px;
-  }
-  p {
-    line-height: 45px;
-    margin-left: 20px;
-    font-size: 20px;
-    width: 100%;
-    padding-bottom: 30px;
-    .sevenEleven {
-      width: 160px;
-      height: 40px;
-      background-color: black;
-      padding: 0;
-      border-radius: 10px;
-      &:hover {
-        background-color: #000000cc;
+      width: 40%;
+      text-align: start;
+      .productInside {
+        display: flex;
+        .imageFrame {
+          width: 50%;
+          .computerImage {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            width: 80%;
+          }
+        }
+        .imageWords {
+          height: 150px;
+          width: 50%;
+        }
       }
     }
   }
 }
-.comments {
-  width: 100%;
-  .commentsTitle {
-    font-weight: bold;
-    padding: 36px;
-    margin: 0;
-  }
-  .stars {
-    display: flex;
-    align-items: center;
-    .star {
-      font-size: 30px;
-      color: $sub-color;
+@media screen and (min-width: 430px) and (max-width: 650px) {
+  .tableFrames {
+    width: 90% !important;
+    display: block !important;
+    .tableLeft {
+      width: 100% !important;
+      ul {
+        width: 100% !important;
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        li {
+          .btnLink {
+            padding: 5px 9px !important;
+            font-size: 18px !important;
+            background-color: white !important;
+            &:hover {
+              background-color: $sub-color !important;
+            }
+            .btnClick {
+              background-color: $sub-color !important;
+            }
+          }
+        }
+      }
+    }
+    .tableRight {
+      width: 100% !important;
+    }
+    table {
+      th {
+        font-size: 13px !important;
+      }
+      tr{
+        td {
+          font-size: 13px !important;
+          .imageWords {
+            height: 70px !important;
+            width: 60%;
+          }
+        }
+        
+      }
+      .productNone {
+        display: none;
+      }
+    }
+    .Coupon {
+      font-size: 13px !important;
+      .usedCoupon {
+        font-size: 16px !important;
+      }
+      .couponSticker {
+        padding: 10px 15px;
+        text-align: center;
+        background-color: $main-color;
+        color: white;
+        font-weight: bold;
+      }
+    }
+    .subtotal {
+      display: block !important;
+      padding: 10px !important;
+      ul {
+        padding: 0;
+        margin: 0;
+        width: 100% !important;
+        font-size: 13px !important;
+        li {
+          width: 100% !important;
+          padding: 6px !important;
+        }
+      }
+    }
+    .underBox {
+      height: fit-content !important;
+      padding-bottom: 20px;
+      .FirstBox,
+      .SecondBox {
+        display: block;
+        width: 100%;
+        .boxes {
+          width: 100%;
+        }
+      }
+      .orderInfo {
+        font-size: 16px;
+        padding: 15px !important;
+        margin: 0 !important;
+      }
+      .contentInfo {
+        line-height: 15px;
+        padding-right: 15px !important;
+        font-size: 15px;
+        padding-bottom: 0;
+        .content {
+          justify-content: space-between;
+          .contentInside {
+            line-height: 15px !important;
+          }
+          .contentPay {
+            display: flex;
+          }
+        }
+        .sevenEleven {
+          width: 100px;
+          height: 40px;
+          background-color: black;
+          padding: 0;
+          border-radius: 10px;
+          color: white;
+          &:hover {
+            background-color: #000000cc;
+          }
+        }
+      }
+    }
+    .comments {
+      width: 100%;
+      .tag {
+        .good {
+          font-weight: bold;
+          color: white;
+          margin: 5px;
+          align-items: center;
+          &:hover {
+            border-color: $sub-color;
+            background-color: $sub-color;
+          }
+        }
+      }
+      .commentsStars {
+        padding-left: 10px !important;
+        padding-right: 20px;
+        .stars {
+          display: flex;
+          align-items: center;
+          .star {
+              font-size: 30px;
+              color: $sub-color;
+          }
+      }
+      }
+      
+      .textField {
+          padding: 20px;
+      }
+      .textFieldFinish{
+          padding: 40px;
+      }
+      .btnSubmit {
+          padding: 10px 15px;
+          text-align: center;
+          background-color: $sub-color;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          width: 140px;
+          border-color: $sub-color;
+          border-radius: 15px;
+          &:hover {
+            border-color: hsl(34, 99%, 53%);
+              background-color: hsl(34, 99%, 53%);
+              color: white;
+          }
+      }
     }
   }
-  .textField {
-    padding: 20px;
-  }
-  .btnSubmit {
-    padding: 10px 15px;
-    text-align: center;
-    background-color: $sub-color;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    width: 140px;
-    border-radius: 15px;
-    &:hover {
-      background-color: hsl(34, 99%, 53%);
+}
+@media screen and (min-width: 651px) and (max-width: 900px) {
+  .tableFrames {
+    display: block !important;
+    .tableLeft {
+      width: 100% !important;
+      ul {
+        width: 100% !important;
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        li {
+          .btnLink {
+            padding: 5px 9px !important;
+            font-size: 18px !important;
+            background-color: white !important;
+            &:hover {
+              background-color: $sub-color !important;
+            }
+            .btnClick {
+              background-color: $sub-color !important;
+            }
+          }
+        }
+      }
     }
+    .tableRight {
+      width: 100% !important;
+    }
+    table {
+      th {
+        font-size: 17px !important;
+      }
+      tr{
+        td {
+          font-size: 17px !important;
+          .imageWords {
+            height: 70px !important;
+            width: 60%;
+          }
+        }
+        
+      }
+      .productNone {
+        display: none;
+      }
+    }
+    .Coupon {
+      font-size: 17px !important;
+      .usedCoupon {
+        font-size: 16px !important;
+      }
+      .couponSticker {
+        padding: 10px 15px;
+        text-align: center;
+        background-color: $main-color;
+        color: white;
+        font-weight: bold;
+      }
+    }
+    .subtotal {
+      display: block !important;
+      padding: 10px !important;
+      ul {
+        padding: 0;
+        margin: 0;
+        width: 100% !important;
+        font-size: 16px !important;
+        li {
+          width: 100% !important;
+          padding: 6px !important;
+        }
+      }
+    }
+    .underBox {
+      height: fit-content !important;
+      padding-bottom: 20px;
+      .FirstBox,
+      .SecondBox {
+        display: block;
+        width: 100%;
+        .boxes {
+          width: 100%;
+        }
+      }
+      .orderInfo {
+        font-size: 20px;
+        padding: 15px !important;
+        margin: 0 !important;
+      }
+      .contentInfo {
+        line-height: 22px;
+        padding-right: 15px !important;
+        font-size: 17px;
+        padding-bottom: 0;
+        .content {
+          justify-content: space-between;
+          .contentInside {
+            line-height: 15px !important;
+          }
+          .contentPay {
+            display: flex;
+          }
+        }
+        .sevenEleven {
+          width: 130px;
+          height: 40px;
+          background-color: black;
+          padding: 0;
+          border-radius: 10px;
+          color: white;
+          &:hover {
+            background-color: #000000cc;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+  .tableFrames {
+    table {
+      th {
+        font-size: 17px !important;
+      }
+      tr{
+        td {
+          font-size: 17px !important;
+          .imageWords {
+            height: 70px !important;
+            width: 60%;
+          }
+        }
+        
+      }
+      .productNone {
+        display: none;
+      }
+    }
+    .Coupon {
+      font-size: 17px !important;
+      .usedCoupon {
+        font-size: 16px !important;
+      }
+      .couponSticker {
+        padding: 10px 15px;
+        text-align: center;
+        background-color: $main-color;
+        color: white;
+        font-weight: bold;
+      }
+    }
+    .subtotal {
+      padding: 10px !important;
+      ul {
+        font-size: 16px !important;
+      }
+    }
+    .underBox {
+      .orderInfo {
+        font-size: 18px !important;
+      }
+      .contentInfo {
+        font-size: 16px !important;
+        .sevenEleven {
+          width: 140px;
+        }
+      }
+    }
+    
   }
 }

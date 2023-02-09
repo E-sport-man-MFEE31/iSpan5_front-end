@@ -1,17 +1,27 @@
+import axios from "axios";
+import { useState } from "react";
+import { useNavigate } from "react-router";
+
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import SideBar from "../reUseable/SideBar";
 import VerifySellerPath from "./VerifySellerPath";
-import "./VerifySeller.css";
 import FormInput from "./formInput/FormInput";
-import { useState } from "react";
-import axios from "axios";
-import { useNavigate } from "react-router";
+import { useAuth } from "../../utils/useAuth";
+
+import "./VerifySeller.css";
 
 function VerifySeller() {
   const navigate = useNavigate();
+  const { currentUser } = useAuth();
+  const [image, setImage] = useState(
+    "http://localhost:8080" +
+      JSON.parse(localStorage.getItem("user")).member
+        .thumbnail
+  );
   const [values, setValues] = useState({
-    user_id: "8",
+    user_id: JSON.parse(localStorage.getItem("user")).member
+      .id,
     store_name: "",
     taxID: "",
     storeIntro: "",
@@ -33,7 +43,7 @@ function VerifySeller() {
       placeholder: "統一編號",
       errorMessage: "統一編號不可為空，且應為8位數！",
       label: "統一編號",
-      pattern: `{8}`,
+      pattern: `^[0-9]{8}$`,
       required: true,
     },
     {
@@ -51,15 +61,11 @@ function VerifySeller() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     let response = await axios.post(
-      "http://localhost:8080/api/verifySeller",
+      `http://localhost:8080/api/profile/${currentUser.member.id}/verifySeller`,
       values
     );
     navigate("/profile");
     console.log(response);
-    setValues({
-      ...values,
-      authorityStatus: "賣家",
-    });
   };
 
   const onChange = (e) => {
@@ -73,8 +79,8 @@ function VerifySeller() {
     <>
       <Header />
       <div className="title p-5 d-flex">
-        <h2 className=" fw-bold titleFirst">驗</h2>
-        <h2 className=" fw-bold">證成賣家</h2>
+        <h2 className="fw-bold titleFirst">驗</h2>
+        <h2 className="fw-bold">證成賣家</h2>
       </div>
       <div className="Nav-title">
         <div className="detailPath d-flex">
@@ -94,7 +100,7 @@ function VerifySeller() {
             <div className="inputChanging d-flex">
               <label className="account">帳號</label>
               <div className="inputWord">
-                Jodie@test.com
+                {currentUser.member.email}
               </div>
             </div>
             {inputs.map((input) => (
@@ -114,14 +120,13 @@ function VerifySeller() {
           <div className="profileStatus">
             <div className="profilePhoto">
               <img
-                src="./images/profileImage.jpg"
+                src={image}
                 alt="profileImage"
                 className="profileImage"
               />
             </div>
-            <div className="profileName">Jodie</div>
-            <div className="authorityStatus">
-              認證狀態 : 賣家
+            <div className="profileName">
+              {currentUser.member.name}
             </div>
           </div>
         </div>
