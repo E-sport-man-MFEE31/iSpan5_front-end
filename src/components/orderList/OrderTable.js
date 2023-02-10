@@ -3,8 +3,9 @@ import {
   useSearchParams,
   useNavigate,
 } from "react-router-dom";
-import OrderItem from "./OrderItem";
 import axios from "axios";
+
+import OrderItem from "./OrderItem";
 
 function OrderTable() {
   // 畫面內容
@@ -42,7 +43,7 @@ function OrderTable() {
     const moment = require("moment");
     result.map((v) => {
       v.date = moment(v.start_time)
-        .utcOffset(8)
+        .utc()
         .format("YYYY-MM-DD");
       return v;
     });
@@ -56,6 +57,7 @@ function OrderTable() {
   // 分頁的功能
   const getPages = () => {
     let pages = [];
+
     for (let i = 1; i <= totalPage; i++) {
       pages.push(
         <li
@@ -64,7 +66,12 @@ function OrderTable() {
           style={{
             fontWeight: "bold",
             padding: "13px 20px",
-            color: page === i ? "#FB570B" : "black",
+            border: "1px solid",
+            borderColor:
+              page === i ? "#FB570B" : "transparent",
+            backgroundColor:
+              page === i ? "#FB570B" : "transparent",
+            borderRadius: "50%",
           }}
           onClick={(e) => {
             setPage(i);
@@ -107,9 +114,17 @@ function OrderTable() {
 
   //多重篩選的處理
   useEffect(() => {
+    // 依各過濾條件產生的新資料陣列
+    // 此處可作判斷或最佳化調整…或調整誰先誰後等等
+    // 用let宣告陣列newTodos，是有可能在處理過程中，重新指定為另個新陣列
     let newContent = getSearchedTodos(content, searchWord);
     newContent = getfilterTodos(newContent, statusFilter);
+
     setContentDisplay(newContent);
+
+    // 注意因為getSearchedTodos需要在searchWord變動時執行，所以需要相依
+    // getFilterTodos與currentFilter同樣道理
+    // 寫為外部傳入的傳入參數來使用，減少錯誤的機會
   }, [content, statusFilter, searchWord]);
 
   return (
